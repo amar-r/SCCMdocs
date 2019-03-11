@@ -48,7 +48,7 @@ Many image files include multiple indexes, such as for different editions of Win
 When you apply software updates to the image, optimize the output by removing any superseded updates. Use the DISM command-line tool, for example: 
 
 ```
-dism /Mount-Image /ImageFile:C:\Data\install.wim /MountDir:C:\Mountdir
+dism /Mount-Image /ImageFile:C:\Data\install.wim /MountDir:C:\Mountdir /index:1
 dism /Image:C:\Mountdir /Cleanup-Image /StartComponentCleanup /ResetBase 
 dism /Unmount-Image /MountDir:C:\Mountdir /Commit  
 ```
